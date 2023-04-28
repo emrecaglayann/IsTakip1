@@ -1,0 +1,54 @@
+﻿@model IEnumerable<IsTakip.Core.Entites.Depo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<p>
+    <a class="btn btn-outline-warning" asp-action="Create">Yeni Oluştur</a>
+</p>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Tanim)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Aciklama)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Yetkili)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YetkiliTelefon)
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tanim)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Aciklama)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Yetkili)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YetkiliTelefon)
+            </td>
+           
+            <td>
+                <a class="btn btn-outline-success" asp-action="Edit" asp-route-id="@item.Id">Düzenle</a> |
+                <a class="btn btn-outline-info" asp-action="Details" asp-route-id="@item.Id">Detaylar</a> |
+                <a class="btn btn-outline-danger" asp-action="Delete" asp-route-id="@item.Id">Sil</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

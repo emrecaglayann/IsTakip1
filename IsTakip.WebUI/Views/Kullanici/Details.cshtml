@@ -1,0 +1,107 @@
+﻿@model IsTakip.Core.Entites.Kullanici
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Düzenle</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ad)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ad)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Soyad)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Soyad)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MusteriId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MusteriId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KullaniciSifre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KullaniciSifre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KullaniciKodu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KullaniciKodu)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MailBildirim)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MailBildirim)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RoleTanim)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RoleTanim)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OlusturanKullanici)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OlusturanKullanici)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OlusturanKullaniciId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OlusturanKullaniciId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OlusturmaTarihi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OlusturmaTarihi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GuncelleyenKullanici)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GuncelleyenKullanici)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GuncelleyenKullaniciId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GuncelleyenKullaniciId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GüncellemeTarihi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GüncellemeTarihi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Aktif)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Aktif)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Silindi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Silindi)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-success" asp-action="Edit" asp-route-id="@Model?.Id">Düzenle</a> |
+    <a class="btn btn-warning" asp-action="Index">Listeye Geri Dön</a>
+</div>

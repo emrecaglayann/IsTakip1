@@ -1,0 +1,73 @@
+﻿@model IsTakip.Core.Entites.Kullanici
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+<h3>Silmek istediğine emin misin?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ad)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ad)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Soyad)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Soyad)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MusteriId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MusteriId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KullaniciSifre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KullaniciSifre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KullaniciKodu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KullaniciKodu)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MailBildirim)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MailBildirim)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RoleTanim)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RoleTanim)
+        </dd>     
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Aktif)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Aktif)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Silindi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Silindi)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Sil" class="btn btn-danger" /> |
+        <a class="btn btn-warning" asp-action="Index">Listeye Geri Dön</a>
+    </form>
+</div>

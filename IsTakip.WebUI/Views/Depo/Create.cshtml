@@ -1,0 +1,86 @@
+﻿@model IsTakip.Core.Entites.Depo
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Yeni Oluştur</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Tanim" class="control-label"></label>
+                <input asp-for="Tanim" class="form-control" />
+                <span asp-validation-for="Tanim" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Aciklama" class="control-label"></label>
+                <input asp-for="Aciklama" class="form-control" />
+                <span asp-validation-for="Aciklama" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Yetkili" class="control-label"></label>
+                <input asp-for="Yetkili" class="form-control" />
+                <span asp-validation-for="Yetkili" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YetkiliTelefon" class="control-label"></label>
+                <input asp-for="YetkiliTelefon" class="form-control" />
+                <span asp-validation-for="YetkiliTelefon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OlusturanKullanici" class="control-label"></label>
+                <input asp-for="OlusturanKullanici" class="form-control" />
+                <span asp-validation-for="OlusturanKullanici" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OlusturanKullaniciId" class="control-label"></label>
+                <input asp-for="OlusturanKullaniciId" class="form-control" />
+                <span asp-validation-for="OlusturanKullaniciId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OlusturmaTarihi" class="control-label"></label>
+                <input asp-for="OlusturmaTarihi" class="form-control" />
+                <span asp-validation-for="OlusturmaTarihi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GuncelleyenKullanici" class="control-label"></label>
+                <input asp-for="GuncelleyenKullanici" class="form-control" />
+                <span asp-validation-for="GuncelleyenKullanici" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GuncelleyenKullaniciId" class="control-label"></label>
+                <input asp-for="GuncelleyenKullaniciId" class="form-control" />
+                <span asp-validation-for="GuncelleyenKullaniciId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GüncellemeTarihi" class="control-label"></label>
+                <input asp-for="GüncellemeTarihi" class="form-control" />
+                <span asp-validation-for="GüncellemeTarihi" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Aktif" /> @Html.DisplayNameFor(model => model.Aktif)
+                </label>
+            </div>
+            <br />
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Silindi" /> @Html.DisplayNameFor(model => model.Silindi)
+                </label>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Oluştur" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="btn btn-warning" asp-action="Index">Listeye Geri Dön</a>
+</div>
+

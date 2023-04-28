@@ -1,0 +1,97 @@
+﻿@using IsTakip.Core.Entites;
+@using IsTakip.Core.Enums;
+@model IsTakip.Core.Entites.Kullanici
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Yeni Oluştur</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Ad" class="control-label"></label>
+                <input asp-for="Ad" class="form-control" />
+                <span asp-validation-for="Ad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Soyad" class="control-label"></label>
+                <input asp-for="Soyad" class="form-control" />
+                <span asp-validation-for="Soyad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MusteriId" class="control-label"></label>
+                <input asp-for="MusteriId" class="form-control" />
+                <span asp-validation-for="MusteriId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KullaniciSifre" class="control-label"></label>
+                <input asp-for="KullaniciSifre" class="form-control" />
+                <span asp-validation-for="KullaniciSifre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KullaniciKodu" class="control-label"></label>
+                <input asp-for="KullaniciKodu" class="form-control" />
+                <span asp-validation-for="KullaniciKodu" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="RoleTanim" class="form-label"></label>
+                <select asp-for="RoleTanim" asp-items="Html.GetEnumSelectList<RoleTanim>()"></select>
+                <span asp-validation-for="RoleTanim" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="OlusturanKullanici" class="control-label"></label>
+                <input asp-for="OlusturanKullanici" class="form-control" />
+                <span asp-validation-for="OlusturanKullanici" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OlusturanKullaniciId" class="control-label"></label>
+                <input asp-for="OlusturanKullaniciId" class="form-control" />
+                <span asp-validation-for="OlusturanKullaniciId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GuncelleyenKullanici" class="control-label"></label>
+                <input asp-for="GuncelleyenKullanici" class="form-control" />
+                <span asp-validation-for="GuncelleyenKullanici" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GuncelleyenKullaniciId" class="control-label"></label>
+                <input asp-for="GuncelleyenKullaniciId" class="form-control" />
+                <span asp-validation-for="GuncelleyenKullaniciId" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="MailBildirim" /> @Html.DisplayNameFor(model => model.MailBildirim)
+                </label>
+            </div>
+            <br />
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Aktif" /> @Html.DisplayNameFor(model => model.Aktif)
+                </label>
+            </div>
+            <br />
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Silindi" /> @Html.DisplayNameFor(model => model.Silindi)
+                </label>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Oluştur" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="btn btn-warning" asp-action="Index">Listeye Geri Dön</a>
+</div>
+
